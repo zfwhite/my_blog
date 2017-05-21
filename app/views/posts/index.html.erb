@@ -1,0 +1,17 @@
+<h1 class='posts-header'>Posts</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th>Link</th>
+  </tr>
+
+  <% @posts.each do |post| %>
+    <tr>
+      <td class="post-entry"><%= post.title %></td>
+      <td class="post-entry"><%= truncate(post.text, length: 20) %></td>
+      <td class="post-entry"><%= link_to 'Show', post_path(post) %></td>
+    </tr>
+  <% end %>
+</table>
