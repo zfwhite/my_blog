@@ -1,5 +1,9 @@
 <h1 class='posts-header'>Posts</h1>
 
+<%= link_to 'New Post', new_post_path(format: :js), remote: true, class: 'post-link' %>
+<div class="new-post-container">
+
+</div>
 <table>
   <tr>
     <th>Title</th>
